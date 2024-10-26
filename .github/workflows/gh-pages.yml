@@ -2,6 +2,10 @@ name: Deploy Site no GitHub Pages
 
 on:
     workflow_dispatch:
+    pull_request:
+        types: [closed]
+        paths:
+            - 'src/**'
     push:
       paths:
         - 'src/**'
